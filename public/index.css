@@ -1,0 +1,43 @@
+.chats{
+    background-color: rgb(187, 248, 248);
+    margin-left:20px;
+    padding:5px;
+    display:inline-block;
+    width:190px;
+    border-radius:15px;
+    padding:10px;
+    border:1.5px solid rgb(0, 0, 0);
+}
+
+.msg{
+    background-color:rgb(39, 174, 241);
+    padding:8px;
+    border-radius:15px;
+}
+
+.btn{
+    margin-left:20px;
+    border:1.5px solid black;
+    border-radius:8px;
+    padding:4px;
+}
+
+.btn-form{
+    display:inline-block;
+}
+
+.change-btn{
+    border:1.5px solid black;
+    border-radius:8px;
+    margin:0 4px;
+    padding:4px;
+    background-color:rgb(66, 177, 221);
+    opacity:0.7;
+}
+
+.change-btn:hover{
+    color:white;
+    opacity:1;
+    transform:scale(1.08);
+    transform:translateY(-2px);
+}

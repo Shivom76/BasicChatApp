@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Chat App</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <h2>All chats</h2>
+    <form method="get" action="/chats/new">
+        <button class="btn">New chat</button>
+    </form>
+
+    <br>
+    <br>
+    <%for (chat of chats){%>
+        <div class="chats">
+            <b>From:</b><%=chat["from"]%>
+
+            <b>To:</b><%=chat["to"]%>
+            <div class="msg">
+                <b>Message:</b><%=chat["msg"]%>
+            </div>
+                
+            <!-- <b>Time:</b><%=chat["createdAt"]%> -->
+            <hr>
+            <%=chat["createdAt"].toString().split(" ").slice(4,5)%>
+            <br>
+            <%=chat["createdAt"].toString().split(" ").slice(0,4).join(" ")%>
+            <br><br>
+            <form method="get" action="/chats/<%=chat['_id']%>/edit" class="btn-form">
+                <button class="change-btn">Edit text</button>
+                <!-- <br><br> -->
+            </form>
+            <form method="get" action="/chats/<%=chat['_id']%>/delete" class="btn-form">
+                <button class="change-btn">Delete chat</button>
+            </form>
+            <!-- <%=chat["createdAt"].toString().split(" ").slice(0,1)%>
+            <%=chat["createdAt"].toString().split(" ").slice(2,3)%>
+            <%=chat["createdAt"].toString().split(" ").slice(1,2)%> -->
+        </div>
+        <br><br>
+    <%}%>
+
+    
+</body>
+</html>
